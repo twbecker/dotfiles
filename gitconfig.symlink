@@ -1,0 +1,19 @@
+[include]
+    path = ~/.gitlocalconfig
+[merge]
+	tool = p4merge
+[diff]
+	tool = p4merge
+[core]
+	excludesfile = ~/.gitignore
+[rebase]
+	autosquash = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
+	st = status -s
+[svn]
+	rmdir = true
+[pull]
+	rebase = true
+[log]
+	date = local
