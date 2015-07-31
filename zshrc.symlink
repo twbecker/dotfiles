@@ -85,13 +85,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Customizations start here
-export ENFORCE_USER=
 export EDITOR=vim
-export KAFKA_HOME=/opt/kafka
-export ROBOT_OPTIONS="-V /home/tommy/robotvariables.py --outputdir /home/tommy/projects/ffs/ffs-server/target/robotframework"
-export VOLDEMORT_HOME=/opt/voldemort
-export ZOOKEEPER_HOME=/opt/zookeeper
 alias tf="tail -F"
-alias src="cd ~/projects"
+# Shared history is NOT a feature
 unsetopt share_history
+# Show full command line on process completion
 zstyle ':completion:*:*:*:*:processes' command 'ps -U $USER -o pid,user,cmd'
