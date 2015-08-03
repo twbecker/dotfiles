@@ -50,11 +50,11 @@ ZSH_CUSTOM=~/.dotfiles/custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn sudo colored-man java)
+plugins=(git mvn sudo colored-man java zsh_reload)
 
 # User configuration
-
-export PATH="/home/tommy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/zookeeper/bin:/opt/kafka/bin:/opt/hadoop/sbin:/opt/hadoop/bin"
+# Don't reset PATH so changes in plugins remain in effect
+#export PATH="/home/tommy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/zookeeper/bin:/opt/kafka/bin:/opt/hadoop/sbin:/opt/hadoop/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
