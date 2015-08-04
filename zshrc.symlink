@@ -16,7 +16,7 @@ ZSH_THEME="tommy"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -54,7 +54,7 @@ plugins=(git mvn sudo colored-man java zsh_reload)
 
 # User configuration
 # Don't reset PATH so changes in plugins remain in effect
-#export PATH="/home/tommy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/zookeeper/bin:/opt/kafka/bin:/opt/hadoop/sbin:/opt/hadoop/bin"
+# export PATH="/home/tommy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
