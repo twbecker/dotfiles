@@ -10,3 +10,9 @@
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "vim/bundle/git-fugitive"]
+	path = vim/bundle/git-fugitive
+	url = https://github.com/tpope/vim-fugitive
