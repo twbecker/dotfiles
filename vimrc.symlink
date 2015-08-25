@@ -1,3 +1,9 @@
+execute pathogen#infect('bundle/{}', '~/.dotfiles/vim/bundle/{}')
+filetype indent plugin on
+runtime macros/matchit.vim
+
+let g:netrw_dirhistmax=0 " Don't create .netrwhist files 
+
 set nocompatible " Be IMproved
 set background=dark " Dark is teh coolest
 set shiftwidth=4 " 4 space indentation
@@ -13,12 +19,16 @@ set number " Show line numbers
 set mouse=a " Enable mouse in all modes
 set laststatus=2 " Always show statusline
 set noshowmode " Don't need this with statusline always there
+set wildmenu " Be more like zsh
+set wildmode=full " Be more like zsh
+set history=100 " Disk space is cheap
 
 syntax on
+
+" Move according to displayed (not "physical") lines
 nnoremap j gj
 nnoremap k gk
-cnoremap sudow w !sudo tee % >/dev/null " :sudow saves read-only files
+cnoremap sudow w !sudo tee % > /dev/null
 
-filetype indent plugin on
-execute pathogen#infect('bundle/{}', '~/.dotfiles/vim/bundle/{}')
 colorscheme mustang
+autocmd  VimLeave * !echo -ne "\033[0m"
