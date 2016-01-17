@@ -8,5 +8,15 @@ via submodules (gasp!).
 
 ## Installation
 Installation should go something like this:
-* git clone --recursive https://github.com/twbecker/dotfiles ~/.dotfiles
-* cd ~/.dotfiles; ./bootstrap
+* `git clone --recursive https://github.com/twbecker/dotfiles ~/.dotfiles`
+* `cd ~/.dotfiles; ./bootstrap`
+
+## Usage
+I use both Linux and OS X, so there are a couple of facilities to make customizations that are local to a specific machine:
+* Machine specific zsh commands can be placed in custom/local.zsh.
+* Machine specific git settings can be placed in ~/.gitlocalconfig. 
+
+## Upgrading submodules
+`git submodule update --remote --merge`
+`git add -A`
+`git commit`
