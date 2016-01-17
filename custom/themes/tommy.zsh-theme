@@ -19,6 +19,9 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
   
   PROMPT='%{$fg[cyan]%}%~ %(!.%{$fg_bold[red]%}#.%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})❯)%{$reset_color%} '
 
+  if [[ -n $SSH_CONNECTION ]]; then
+    PROMPT='%{$fg[red]%}%m%{$reset_color%}:$PROMPT'
+  fi
   ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}"
   ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
@@ -33,4 +36,8 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
 else 
   MODE_INDICATOR="❮❮❮"
   PROMPT='%~ %(!.#.❯) '
+  if [[ -n $SSH_CONNECTION ]]; then
+    PROMPT='%m:$PROMPT'
+  fi
 fi
+
