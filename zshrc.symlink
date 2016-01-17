@@ -50,7 +50,7 @@ ZSH_CUSTOM=~/.dotfiles/custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn sudo colored-man java zsh_reload history-substring-search)
+plugins=(git mvn sudo colored-man java zsh_reload history-substring-search zsh-syntax-highlighting)
 
 # User configuration
 # Don't reset PATH so changes in plugins remain in effect
