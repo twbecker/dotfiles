@@ -92,3 +92,6 @@ alias tf="tail -F"
 unsetopt share_history
 # Show full command line on process completion
 zstyle ':completion:*:*:*:*:processes' command 'ps -U $USER -o pid,user,cmd'
+# Replace ctrl-P/N with history-substring equivalent widgets
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
