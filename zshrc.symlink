@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # Customizations start here
 export EDITOR=vim
 export LESS=FRX
+ZSH_HIGHLIGHT_STYLES[path]=none
 alias tf="tail -F"
 # Shared history is NOT a feature
 unsetopt share_history
