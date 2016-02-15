@@ -11,13 +11,15 @@
 	autosquash = true
 	autostash = true
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
+    la = !git config -l | grep alias | cut -c 7-
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>' --abbrev-commit
+	ll = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>' --abbrev-commit --numstat
 	st = status -s
 [svn]
 	rmdir = true
 	pushmergeinfo = true
 [pull]
-	rebase = true
+	rebase = preserve
 [log]
 	date = local
 [status]
