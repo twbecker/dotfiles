@@ -4,6 +4,7 @@
 	tool = p4merge
 [diff]
 	tool = p4merge
+	submodule = log
 [core]
 	excludesfile = ~/.gitignore
 [rebase]
@@ -19,3 +20,5 @@
 	rebase = true
 [log]
 	date = local
+[status]
+	submoduleSummary = true
