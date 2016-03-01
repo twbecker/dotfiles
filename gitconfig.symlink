@@ -22,3 +22,6 @@
 	date = local
 [status]
 	submoduleSummary = true
+	showUntrackedFiles = all
+[push]
+	default = simple
