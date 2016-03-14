@@ -5,6 +5,7 @@
 [diff]
 	tool = p4merge
 	submodule = log
+	mnemonicPrefix = true
 [core]
 	excludesfile = ~/.gitignore
 [rebase]
@@ -26,4 +27,7 @@
 	submoduleSummary = true
 	showUntrackedFiles = all
 [push]
-	default = simple
+	default = current
+[mergetool]
+	keepTemporaries = false
+	prompt = false
