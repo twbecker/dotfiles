@@ -3,6 +3,9 @@
 [merge]
 	tool = p4merge
 [diff]
+    mnemonicprefix = true
+    renames = copies
+    wordRegex = '[^[:space:] ,.;]+'
 	tool = p4merge
 	submodule = log
 	mnemonicPrefix = true
@@ -13,8 +16,8 @@
 	autostash = true
 [alias]
     la = !git config -l | grep alias | cut -c 7-
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>' --abbrev-commit
-	ll = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>' --abbrev-commit --numstat
+	ll = log --color --pretty=format:'%C(bold blue)%h%Creset -%C(auto)%d%Creset %s %C(bold yellow)(%cr)%C(bold blue) -%C(dim white) %an' --numstat
+	lg = log --color --graph --pretty=format:'%C(bold blue)%h%Creset -%C(auto)%d%Creset %s %C(bold yellow)(%cr)%Creset -%C(dim white) %an%Creset'
 	st = status -s
 [svn]
 	rmdir = true
@@ -31,3 +34,7 @@
 [mergetool]
 	keepTemporaries = false
 	prompt = false
+[branch]
+	autoSetupMerge = always
+[fetch]
+	prune = true
