@@ -9,13 +9,14 @@
 	tool = p4merge
 	submodule = log
 	mnemonicPrefix = true
+	compactionHeuristic = true
 [core]
 	excludesfile = ~/.gitignore
 [rebase]
 	autosquash = true
 	autostash = true
 [alias]
-    la = !git config -l | grep alias | cut -c 7-
+    alias = !git config -l | grep alias | cut -c 7-
 	ll = log --color --pretty=format:'%C(bold blue)%h%Creset -%C(auto)%d%Creset %s %C(bold yellow)(%cr)%C(bold blue) -%C(dim white) %an' --numstat
 	lg = log --color --graph --pretty=format:'%C(bold blue)%h%Creset -%C(auto)%d%Creset %s %C(bold yellow)(%cr)%Creset -%C(dim white) %an%Creset'
 	st = status -s
