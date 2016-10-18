@@ -96,6 +96,10 @@ set -o cdablevars
 export EDITOR=vim
 export LESS=FRX
 ZSH_HIGHLIGHT_STYLES[path]=none
+DEFAULT_USER=tommy
+POWERLEVEL9K_RAM_ICON=''
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs load ram time)
+POWERLEVEL9K_STATUS_VERBOSE=false
 alias tf="tail -F"
 # Shared history is NOT a feature
 unsetopt share_history
@@ -104,8 +108,11 @@ zstyle ':completion:*:*:*:*:processes' command 'ps -U $USER -o pid,user,cmd'
 # Replace ctrl-P/N with history-substring equivalent widgets
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
+<<<<<<< Updated upstream
 # Complete only from the left of the cursor
 bindkey -M emacs '^i' expand-or-complete-prefix
 set -o noautoremoveslash
 # https://github.com/robbyrussell/oh-my-zsh/commit/ed484dfaf63c6d8789b2bd2e952a07bbbb9ad330
 set -o cdablevars
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
