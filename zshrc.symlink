@@ -108,7 +108,6 @@ zstyle ':completion:*:*:*:*:processes' command 'ps -U $USER -o pid,user,cmd'
 # Replace ctrl-P/N with history-substring equivalent widgets
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
-<<<<<<< Updated upstream
 # Complete only from the left of the cursor
 bindkey -M emacs '^i' expand-or-complete-prefix
 set -o noautoremoveslash
