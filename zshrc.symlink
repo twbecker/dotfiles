@@ -6,13 +6,19 @@ export ZSH=~/.dotfiles/oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
+POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 DEFAULT_USER="$USER"
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs load ram_joined)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs load ram command_execution_time)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs load ram_joined)
+POWERLEVEL9K_DIR_SHOW_WRITABLE=true
+POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 POWERLEVEL9K_STATUS_VERBOSE=false
 POWERLEVEL9K_RAM_ELEMENTS=(ram_free)
-POWERLEVEL9K_RAM_ICON=
-POWERLEVEL9K_LOAD_ICON=
+#POWERLEVEL9K_HOME_FOLDER_ABBREVIATION=
+#POWERLEVEL9K_RAM_ICON=
+#POWERLEVEL9K_LOAD_ICON=
 #POWERLEVEL9K_RAM_BACKGROUND=blue
 
 # Uncomment the following line to use case-sensitive completion.
@@ -57,7 +63,7 @@ ZSH_CUSTOM=~/.dotfiles/custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn sudo colored-man-pages java zsh_reload history-substring-search zsh-syntax-highlighting)
+plugins=(git sudo colored-man-pages java zsh_reload history-substring-search zsh-syntax-highlighting)
 
 # User configuration
 # Don't reset PATH so changes in plugins remain in effect
@@ -66,6 +72,7 @@ plugins=(git mvn sudo colored-man-pages java zsh_reload history-substring-search
 
 source $ZSH/oh-my-zsh.sh
 
+POWERLEVEL9K_HOME_SUB_ICON="$(print_icon 'HOME_ICON')"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -96,10 +103,6 @@ set -o cdablevars
 export EDITOR=vim
 export LESS=FRX
 ZSH_HIGHLIGHT_STYLES[path]=none
-DEFAULT_USER=tommy
-POWERLEVEL9K_RAM_ICON=''
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs load ram time)
-POWERLEVEL9K_STATUS_VERBOSE=false
 alias tf="tail -F"
 # Shared history is NOT a feature
 unsetopt share_history
