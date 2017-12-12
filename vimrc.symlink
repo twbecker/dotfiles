@@ -3,6 +3,13 @@ filetype indent plugin on
 runtime macros/matchit.vim
 
 let g:netrw_dirhistmax=0 " Don't create .netrwhist files 
+let g:airline_powerline_fonts=1
+let g:airline_themme='base16'
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 set nocompatible " Be IMproved
 set background=dark " Dark is teh coolest
@@ -29,6 +36,3 @@ syntax on
 nnoremap j gj
 nnoremap k gk
 cnoremap sudow w !sudo tee % > /dev/null
-
-colorscheme mustang
-autocmd  VimLeave * !echo -ne "\033[0m"

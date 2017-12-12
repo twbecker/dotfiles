@@ -90,7 +90,7 @@ ZSH_CUSTOM=~/.dotfiles/custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo colored-man-pages java zsh_reload history-substring-search zsh-syntax-highlighting vi-mode)
+plugins=(vi-mode git sudo base16-shell colored-man-pages java zsh_reload history-substring-search zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 POWERLEVEL9K_HOME_FOLDER_ABBREVIATION=''
@@ -129,6 +129,7 @@ POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$(print_icon 'RIGHT_SUBSEGMENT_SEPARATOR')
 set -o cdablevars
 export EDITOR=vim
 export LESS=FRX
+KEYTIMEOUT=25
 ZSH_HIGHLIGHT_STYLES[path]=none
 alias tf="tail -F"
 # Shared history is NOT a feature
