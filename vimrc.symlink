@@ -4,7 +4,7 @@ runtime macros/matchit.vim
 
 let g:netrw_dirhistmax=0 " Don't create .netrwhist files 
 let g:airline_powerline_fonts=1
-let g:airline_themme='base16'
+let g:airline_theme='base16'
 
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
