@@ -1,9 +1,7 @@
 BASE16_SHELL=$HOME/.dotfiles/base16-shell/
 [[ -e $BASE16_SHELL/profile_helper.sh ]] && eval "$($BASE16_SHELL/profile_helper.sh)"
-BASE16_THEME=chalk
 
 POWERLEVEL9K_MODE="nerdfont-complete"
-source ~/.dotfiles/powerlevel9k/powerlevel9k.zsh-theme
 DEFAULT_USER="$USER"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir_writable dir virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs vi_mode load ram)
@@ -46,6 +44,9 @@ POWERLEVEL9K_VCS_GIT_ICON='\UF113'
 POWERLEVEL9K_HOME_FOLDER_ABBREVIATION=''
 POWERLEVEL9K_FOLDER_ICON=''
 POWERLEVEL9K_BACKGROUND_JOBS_ICON='\UF013'
+
+source ~/.dotfiles/powerlevel9k/powerlevel9k.zsh-theme
+
 POWERLEVEL9K_HOME_SUB_ICON=$(print_icon 'HOME_ICON')
 POWERLEVEL9K_VCS_REMOTE_BRANCH_ICON=" $(print_icon 'VCS_REMOTE_BRANCH_ICON')"
 POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$(print_icon 'LEFT_SUBSEGMENT_SEPARATOR')
