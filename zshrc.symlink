@@ -1,152 +1,26 @@
-# Path to your oh-my-zsh installation.
-export ZSH=~/.dotfiles/oh-my-zsh
+DOTFILES=$HOME/.dotfiles
+ZSH=$DOTFILES/zsh
+fpath=($ZSH/functions $fpath)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-POWERLEVEL9K_MODE="nerdfont-complete"
-ZSH_THEME="powerlevel9k/powerlevel9k"
-DEFAULT_USER="$USER"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir_writable dir virtualenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs vi_mode load ram)
-POWERLEVEL9K_SHORTEN_STRATEGY=truncate_middle
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind git-stash git-tagname)
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='default'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='blue'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='default'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='blue'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='default'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='blue'
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND='default'
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND='red'
-POWERLEVEL9K_VCS_BACKGROUND='default'
-POWERLEVEL9K_VCS_FOREGROUND='green'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='default'
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='green'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='default'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='green'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='default'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='green'
-POWERLEVEL9K_VIRTUALENV_BACKGROUND='default'
-POWERLEVEL9K_VIRTUALENV_FOREGROUND='white'
-POWERLEVEL9K_STATUS_ERROR_BACKGROUND='default'
-POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND='default'
-POWERLEVEL9K_VI_MODE_INSERT_BACKGROUND='default'
-POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='default'
-POWERLEVEL9K_LOAD_NORMAL_BACKGROUND='default'
-POWERLEVEL9K_LOAD_NORMAL_FOREGROUND='green'
-POWERLEVEL9K_LOAD_WARNING_BACKGROUND='default'
-POWERLEVEL9K_LOAD_WARNING_FOREGROUND='yellow'
-POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND='default'
-POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND='red'
-POWERLEVEL9K_RAM_BACKGROUND='default'
-POWERLEVEL9K_RAM_FOREGROUND='blue'
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_PYTHON_ICON='\UE73C'
-POWERLEVEL9K_VCS_GIT_ICON='\UF113'
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+source $ZSH/theme.zsh
+source $ZSH/completion.zsh
+source $ZSH/keys.zsh
+source $ZSH/options.zsh
+source $ZSH/alias.zsh
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+[[ -f $ZSH/local.zsh ]] && source $ZSH/local.zsh
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/.dotfiles/custom
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode git sudo base16-shell colored-man-pages java zsh_reload history-substring-search zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
-POWERLEVEL9K_HOME_FOLDER_ABBREVIATION=''
-POWERLEVEL9K_FOLDER_ICON=''
-POWERLEVEL9K_BACKGROUND_JOBS_ICON='\UF013'
-POWERLEVEL9K_HOME_SUB_ICON=$(print_icon 'HOME_ICON')
-POWERLEVEL9K_VCS_REMOTE_BRANCH_ICON=" $(print_icon 'VCS_REMOTE_BRANCH_ICON')"
-POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$(print_icon 'LEFT_SUBSEGMENT_SEPARATOR')
-POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$(print_icon 'RIGHT_SUBSEGMENT_SEPARATOR')
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Customizations start here
-set -o cdablevars
 export EDITOR=vim
 export LESS=FRX
-KEYTIMEOUT=25
-ZSH_HIGHLIGHT_STYLES[path]=none
-alias tf="tail -F"
-# Shared history is NOT a feature
-unsetopt share_history
-# Show full command line on process completion
-zstyle ':completion:*:*:*:*:processes' command 'ps -U $USER -o pid,user,cmd'
-# Replace ctrl-P/N with history-substring equivalent widgets
-bindkey -M emacs '^P' history-substring-search-up
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M emacs '^N' history-substring-search-down
-bindkey -M vicmd 'j' history-substring-search-down
-# Complete only from the left of the cursor
-bindkey -M emacs '^i' expand-or-complete-prefix
-set -o noautoremoveslash
-# https://github.com/robbyrussell/oh-my-zsh/commit/ed484dfaf63c6d8789b2bd2e952a07bbbb9ad330
-set -o cdablevars
+export CLICOLOR=1
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-test -e /usr/local/opt/chruby/share/chruby/chruby.sh && source /usr/local/opt/chruby/share/chruby/chruby.sh
-test -e /usr/local/opt/chruby/share/chruby/auto.sh && source /usr/local/opt/chruby/share/chruby/auto.sh
+[[ -e "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"
+[[ -e /usr/local/opt/chruby/share/chruby/chruby.sh ]] && source /usr/local/opt/chruby/share/chruby/chruby.sh
+[[ -e /usr/local/opt/chruby/share/chruby/auto.sh ]] && source /usr/local/opt/chruby/share/chruby/auto.sh
+
