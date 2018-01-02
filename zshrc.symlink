@@ -1,6 +1,9 @@
 DOTFILES=$HOME/.dotfiles
 ZSH=$DOTFILES/zsh
 fpath=($ZSH/functions $fpath)
+for f in $ZSH/functions/*(N.:t); do
+    autoload -U $f
+done
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
