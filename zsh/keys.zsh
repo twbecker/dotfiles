@@ -1,22 +1,39 @@
 # Use vi-mode, but keep familiar emacs bindings (^P,^N, etc)
+# Also replace history navigation with substring search equivalents
 bindkey -v
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
+bindkey '^P' history-substring-search-up
+bindkey '^N' history-substring-search-down
+bindkey '^R' history-incremental-search-backward
+bindkey '^A' beginning-of-line
+bindkey '^B' backward-char
+bindkey '^D' delete-char-or-list
+bindkey '^E' end-of-line
+bindkey '^F' forward-char
+bindkey '^K' kill-line
+bindkey '^?' backward-delete-char
+bindkey '\e.' insert-last-word
+
+# And in command mode
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
-bindkey -M viins '^P' history-substring-search-up
-bindkey -M viins '^N' history-substring-search-down
-bindkey -M viins '^R' history-incremental-search-backward
-bindkey -M viins '^A' beginning-of-line
-bindkey -M viins '^B' backward-char
-bindkey -M viins '^D' delete-char-or-list
-bindkey -M viins '^E' end-of-line
-bindkey -M viins '^F' forward-char
-bindkey -M viins '^K' kill-line
-bindkey -M viins '^?' backward-delete-char
+bindkey -M vicmd '^P' history-substring-search-up
+bindkey -M vicmd '^N' history-substring-search-down
+bindkey -M vicmd '^R' history-incremental-search-backward
+bindkey -M vicmd '^A' beginning-of-line
+bindkey -M vicmd '^B' backward-char
+bindkey -M vicmd '^D' delete-char-or-list
+bindkey -M vicmd '^E' end-of-line
+bindkey -M vicmd '^F' forward-char
+bindkey -M vicmd '\e.' insert-last-word
+
+#autoload -Uz edit-command-line
+#zle -N edit-command-line
+#bindkey -M vicmd 'v' edit-command-line
 
 # Complete only from the left of the cursor
-#bindkey -M viins '^i' expand-or-complete-prefix
+#bindkey '^i' expand-or-complete-prefix
 
 KEYTIMEOUT=25
 
