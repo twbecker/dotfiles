@@ -11,9 +11,11 @@ bindkey '^B' backward-char
 bindkey '^D' delete-char-or-list
 bindkey '^E' end-of-line
 bindkey '^F' forward-char
+bindkey '^I' expand-or-complete-prefix # Only complete from the left side
 bindkey '^K' kill-line
 bindkey '^?' backward-delete-char
 bindkey '\e.' insert-last-word
+bindkey '^[[Z' undo  # Shift-tab undoes completion
 
 # And in command mode
 bindkey -M vicmd 'k' history-substring-search-up
@@ -27,6 +29,10 @@ bindkey -M vicmd '^D' delete-char-or-list
 bindkey -M vicmd '^E' end-of-line
 bindkey -M vicmd '^F' forward-char
 bindkey -M vicmd '\e.' insert-last-word
+bindkey -M vicmd '^I' expand-or-complete-prefix
+
+bindkey -M menuselect '\e' vi-cmd-mode
+bindkey -M menuselect '^[[Z' reverse-menu-complete # Set to avoid inheriting the undo binding above
 
 #autoload -Uz edit-command-line
 #zle -N edit-command-line
