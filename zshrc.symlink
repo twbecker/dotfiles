@@ -1,11 +1,9 @@
-DOTFILES=$HOME/.dotfiles
+DOTFILES=~/.dotfiles
 ZSH=$DOTFILES/zsh
 fpath=($ZSH/functions $fpath)
 for f in $ZSH/functions/*(N.:t); do
     autoload -U $f
 done
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -13,6 +11,7 @@ SAVEHIST=1000
 
 source $ZSH/theme.zsh
 source $ZSH/completion.zsh
+source $ZSH/${$(uname):l}.zsh
 source $ZSH/keys.zsh
 source $ZSH/options.zsh
 source $ZSH/alias.zsh
@@ -22,8 +21,3 @@ source $ZSH/alias.zsh
 export EDITOR=vim
 export LESS=FRX
 export CLICOLOR=1
-
-[[ -e "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"
-[[ -e /usr/local/opt/chruby/share/chruby/chruby.sh ]] && source /usr/local/opt/chruby/share/chruby/chruby.sh
-[[ -e /usr/local/opt/chruby/share/chruby/auto.sh ]] && source /usr/local/opt/chruby/share/chruby/auto.sh
-
