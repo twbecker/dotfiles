@@ -1,3 +1,4 @@
+zmodload zsh/complist
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored _approximate
@@ -11,11 +12,14 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' prompt 'Corrected %e errors'
 zstyle ':completion:*' select-prompt '%B%F{blue}Scrolling active: %l%b%f'
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/Users/tommy/.zsh/completion.zsh'
+zstyle :compinstall filename '~/.zsh/completion.zsh'
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# Keep directories and files separated
+zstyle ':completion:*' list-dirs-first true
 
 zstyle ':completion::complete:*' use-cache 1
 
