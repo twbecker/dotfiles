@@ -6,7 +6,7 @@ zstyle ':completion:*' format '%B%F{blue}--- %d ---%b%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt '%B%F{blue}At %p: Hit TAB for more, or the character to insert%b%f'
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'l:|=* r:|=*'
 zstyle ':completion:*' max-errors 2
 zstyle ':completion:*' menu select
 zstyle ':completion:*' prompt 'Corrected %e errors'
