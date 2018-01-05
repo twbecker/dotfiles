@@ -5,13 +5,14 @@
 [diff]
     mnemonicprefix = true
     renames = copies
-    wordRegex = '[^[:space:] ,.;]+'
+	wordRegex = "[^[:space:],.;]+"
 	tool = p4merge
 	submodule = log
 	mnemonicPrefix = true
 	compactionHeuristic = true
 [core]
 	excludesfile = ~/.gitignore
+	attributesFile = ~/.gitattributes
 [rebase]
 	autosquash = true
 	autostash = true
