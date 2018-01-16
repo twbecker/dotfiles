@@ -9,9 +9,9 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
-source $ZSH/theme.zsh
 source $ZSH/completion.zsh
 source $ZSH/${$(uname):l}.zsh
+source $ZSH/theme.zsh
 source $ZSH/keys.zsh
 source $ZSH/options.zsh
 source $ZSH/alias.zsh
