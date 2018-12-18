@@ -1,7 +1,8 @@
 DOTFILES=~/.dotfiles
 ZSH=$DOTFILES/zsh
 fpath=($ZSH/functions $fpath)
-for f in $ZSH/functions/*(N.:t); do
+source $ZSH/options.zsh
+for f in $ZSH/functions/^_*(N.:t); do
     autoload -U $f
 done
 
@@ -13,7 +14,6 @@ source $ZSH/completion.zsh
 source $ZSH/${$(uname):l}.zsh
 source $ZSH/theme.zsh
 source $ZSH/keys.zsh
-source $ZSH/options.zsh
 source $ZSH/alias.zsh
 
 [[ -f $ZSH/local.zsh ]] && source $ZSH/local.zsh
