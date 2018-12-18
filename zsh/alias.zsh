@@ -7,3 +7,4 @@ alias .....=../../../..
 alias ......=../../../../..
 alias d='dirs -v'
 alias p='cd ~/projects'
+alias ll='ls -l'
