@@ -40,3 +40,7 @@
 	autoSetupMerge = always
 [fetch]
 	prune = true
+[man]
+	viewer = colored
+[man "colored"]
+	cmd = zsh /Users/tommy/.dotfiles/zsh/functions/man
