@@ -6,7 +6,7 @@ bindkey '^R' history-incremental-search-backward
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 
 # Complete only from the left of the cursor
-#bindkey '^i' expand-or-complete-prefix
+bindkey '^i' expand-or-complete-prefix
 
 KEYTIMEOUT=25
 
