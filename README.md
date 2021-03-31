@@ -4,8 +4,8 @@ These are my dotfiles.  There are many like them but these are mine.
 ## Contents
 When I first switched to Zsh, I used [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh). It's a great project,
 but it's a bit bloated, and I got tired of not knowing how my shell worked. So I rolled my own and am going framework-less for now.
-I still have a number of submodules for my theme, [powerlevel9k]i(https://github.com/bhilburn/powerlevel9k) and for a number of vim plugins 
-managed by  [vim-pathogen](https://github.com/tpope/vim-pathogen).
+I still have a number of submodules for my theme, [powerlevel10k](https://github.com/romkatv/powerlevel10k) and for a number of vim plugins 
+managed by [vim-pathogen](https://github.com/tpope/vim-pathogen).
 
 ## Installation
 Installation should go something like this:

@@ -24,4 +24,4 @@
 	url = git@github.com:vim-airline/vim-airline-themes.git
 [submodule "powerlevel10k"]
 	path = powerlevel10k
-	url = ./powerlevel10k/
+	url = https://github.com/romkatv/powerlevel10k.git

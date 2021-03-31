@@ -25,7 +25,7 @@
 	rmdir = true
 	pushmergeinfo = true
 [pull]
-	rebase = preserve
+	rebase = merges
 [log]
 	date = local
 [status]

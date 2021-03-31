@@ -1,6 +1,9 @@
 # Brew installed locations
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+BREW_HOME=${BREW_HOME:-/opt/homebrew} # set to /usr/local in local.zsh on Intel
+eval $($BREW_HOME/bin/brew shellenv)
+fpath=($BREW_HOME/completions/zsh $fpath)
+source $BREW_HOME/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $BREW_HOME/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 [[ -e "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"
 [[ -e /usr/local/opt/chruby/share/chruby/chruby.sh ]] && source /usr/local/opt/chruby/share/chruby/chruby.sh
 [[ -e /usr/local/opt/chruby/share/chruby/auto.sh ]] && source /usr/local/opt/chruby/share/chruby/auto.sh

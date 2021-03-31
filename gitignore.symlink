@@ -3,3 +3,4 @@
 target/
 *.pyc
 .envrc
+.DS_Store

@@ -10,13 +10,12 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
-source $ZSH/completion.zsh
+[[ -f $ZSH/local.zsh ]] && source $ZSH/local.zsh
 source $ZSH/${$(uname):l}.zsh
+source $ZSH/completion.zsh
 source $ZSH/theme.zsh
 source $ZSH/keys.zsh
 source $ZSH/alias.zsh
-
-[[ -f $ZSH/local.zsh ]] && source $ZSH/local.zsh
 
 export EDITOR=vim
 export LESS=FRX
