@@ -1,5 +1,9 @@
 # Brew installed locations
-BREW_HOME=${BREW_HOME:-/opt/homebrew} # set to /usr/local in local.zsh on Intel
+if [[ $(uname -m) = "arm64" ]]; then
+    BREW_HOME=/opt/homebrew
+else
+    BREW_HOME=/usr/local
+fi
 eval $($BREW_HOME/bin/brew shellenv)
 fpath=($BREW_HOME/completions/zsh $fpath)
 source $BREW_HOME/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
