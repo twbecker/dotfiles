@@ -43,4 +43,4 @@
 [man]
 	viewer = colored
 [man "colored"]
-	cmd = zsh /Users/tommy/.dotfiles/zsh/functions/man
+	cmd = zsh $HOME/.dotfiles/zsh/functions/man
