@@ -25,3 +25,6 @@
 [submodule "powerlevel10k"]
 	path = powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "zsh-completions"]
+	path = zsh-completions
+	url = ./zsh-completions

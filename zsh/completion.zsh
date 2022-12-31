@@ -26,6 +26,4 @@ zstyle ':completion::complete:*' use-cache 1
 # Show full command line on process completion
 zstyle ':completion:*:*:*:*:processes' command 'ps -U $USER -o pid,user,cmd'
 
-if (( $+commands[op] )); then
-  eval "$(op completion zsh)"; compdef _op op
-fi
+autoload -U +X bashcompinit && bashcompinit

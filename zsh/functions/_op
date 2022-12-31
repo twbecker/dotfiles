@@ -1,0 +1,2 @@
+#compdef _op op
+eval "$(op completion zsh)"

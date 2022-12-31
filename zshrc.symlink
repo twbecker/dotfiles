@@ -1,6 +1,6 @@
 DOTFILES=~/.dotfiles
 ZSH=$DOTFILES/zsh
-fpath=($ZSH/functions $fpath)
+fpath=($ZSH/functions $DOTFILES/zsh-completions/src $fpath)
 source $ZSH/options.zsh
 for f in $ZSH/functions/^_*(N.:t); do
     autoload -U $f
