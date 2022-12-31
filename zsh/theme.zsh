@@ -1,9 +1,9 @@
 BASE16_SHELL=$HOME/.dotfiles/base16-shell/
-[[ -e $BASE16_SHELL/profile_helper.sh ]] && eval "$($BASE16_SHELL/profile_helper.sh)"
+[[ -e $BASE16_SHELL/profile_helper.sh ]] && source "$BASE16_SHELL/profile_helper.sh"
 
 POWERLEVEL9K_MODE="nerdfont-complete"
 DEFAULT_USER="$USER"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir_writable dir virtualenv vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir_writable dir direnv virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs load ram)
 POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
