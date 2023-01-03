@@ -1,15 +1,23 @@
 [include]
     path = ~/.gitlocalconfig
 [merge]
-	tool = p4merge
+	tool = idea
+[mergetool "idea"]
+    cmd = idea merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+	keepTemporaries = false
+	prompt = false
 [diff]
     mnemonicprefix = true
     renames = copies
 	wordRegex = "[^[:space:],.;]+"
-	tool = p4merge
+	tool = idea
 	submodule = log
 	mnemonicPrefix = true
 	compactionHeuristic = true
+[difftool]
+    prompt = false
+[difftool "idea"]
+    cmd = idea diff "$LOCAL" "$REMOTE"
 [core]
 	excludesfile = ~/.gitignore
 	attributesFile = ~/.gitattributes
@@ -33,9 +41,6 @@
 	showUntrackedFiles = all
 [push]
 	default = current
-[mergetool]
-	keepTemporaries = false
-	prompt = false
 [branch]
 	autoSetupMerge = always
 [fetch]
@@ -44,3 +49,5 @@
 	viewer = colored
 [man "colored"]
 	cmd = zsh ~/.dotfiles/zsh/functions/man
+[rerere]
+	enabled = true
