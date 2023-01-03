@@ -27,4 +27,4 @@
 	url = https://github.com/romkatv/powerlevel10k.git
 [submodule "zsh-completions"]
 	path = zsh-completions
-	url = ./zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git
