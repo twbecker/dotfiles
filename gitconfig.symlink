@@ -1,5 +1,3 @@
-[include]
-    path = ~/.gitlocalconfig
 [merge]
 	tool = idea
 [mergetool "idea"]
@@ -51,3 +49,10 @@
 	cmd = zsh ~/.dotfiles/zsh/functions/man
 [rerere]
 	enabled = true
+[init]
+	defaultBranch = main
+[user]
+	name = Tommy Becker
+	email = twbecker@gmail.com
+[include]
+    path = ~/.gitlocalconfig
