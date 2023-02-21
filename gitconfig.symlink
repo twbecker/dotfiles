@@ -24,8 +24,8 @@
 	autostash = true
 [alias]
     alias = !git config -l | grep alias | cut -c 7-
-	ll = log --color --pretty=format:'%C(bold blue)%h%Creset -%C(auto)%d%Creset %s %C(bold yellow)(%cr)%C(bold blue) -%C(dim white) %an' --numstat
-	lg = log --color --graph --pretty=format:'%C(bold blue)%h%Creset -%C(auto)%d%Creset %s %C(bold yellow)(%cr)%Creset -%C(dim white) %an%Creset'
+    ll = log --color --date=human --pretty=format:'%C(bold blue)%h%Creset -%C(auto)%d%Creset %s %C(bold yellow)(%cd)%C(bold blue) -%C(dim white) %an' --numstat
+    lg = log --color --graph --date=human --pretty=format:'%C(bold blue)%h%Creset -%C(auto)%d%Creset %s %C(bold yellow)(%cd)%Creset -%C(dim white) %an%Creset'
 	st = status -s
 [svn]
 	rmdir = true
