@@ -1,22 +1,8 @@
 BASE16_SHELL=$HOME/.dotfiles/base16-shell/
-[[ -e $BASE16_SHELL/profile_helper.sh ]] && source "$BASE16_SHELL/profile_helper.sh"
+[[ -n $PS1 ]] && [[ -s $BASE16_SHELL/profile_helper.sh ]] && source "$BASE16_SHELL/profile_helper.sh"
 
-POWERLEVEL9K_MODE="nerdfont-complete"
-DEFAULT_USER="$USER"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir_writable dir direnv virtualenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs load ram)
-POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind git-stash git-tagname)
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_VCS_GIT_ICON='\UF113'
-
-
+source ~/.dotfiles/zsh/p10k.zsh
 source ~/.dotfiles/powerlevel10k/powerlevel10k.zsh-theme
-POWERLEVEL9K_VI_MODE_INSERT_BACKGROUND='blue'
-POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND=$DEFAULT_COLOR
-POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='blue'
-POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND=$DEFAULT_COLOR
 
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=bg=magenta,fg=black
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=bg=red,fg=black
