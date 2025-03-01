@@ -1,7 +1,7 @@
 [merge]
 	tool = idea
 [mergetool "idea"]
-    cmd = idea merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+    cmd = idea --wait merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 	keepTemporaries = false
 	prompt = false
 [diff]
@@ -15,7 +15,7 @@
 [difftool]
     prompt = false
 [difftool "idea"]
-    cmd = idea diff "$LOCAL" "$REMOTE"
+    cmd = idea --wait diff "$LOCAL" "$REMOTE"
 [core]
 	excludesfile = ~/.gitignore
 	attributesFile = ~/.gitattributes
