@@ -11,7 +11,7 @@
 	tool = idea
 	submodule = log
 	mnemonicPrefix = true
-	compactionHeuristic = true
+	algorithm = histogram
 [difftool]
     prompt = false
 [difftool "idea"]
@@ -20,10 +20,12 @@
 	excludesfile = ~/.gitignore
 	attributesFile = ~/.gitattributes
 [rebase]
-	autosquash = true
-	autostash = true
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
 [alias]
     alias = !git config -l | grep alias | cut -c 7-
+    blame = blame -w -C -C -C
     ll = log --color --date=human --pretty=format:'%C(bold blue)%h%Creset -%C(auto)%d%Creset %s %C(bold yellow)(%cd)%C(bold blue) -%C(dim white) %an' --numstat
     lg = log --color --graph --date=human --pretty=format:'%C(bold blue)%h%Creset -%C(auto)%d%Creset %s %C(bold yellow)(%cd)%Creset -%C(dim white) %an%Creset'
 	st = status -s
@@ -39,16 +41,20 @@
 	showUntrackedFiles = all
 [push]
 	default = current
+	autoSetupRemote = true
 [branch]
 	autoSetupMerge = always
+	sort = -committerdate
 [fetch]
 	prune = true
+	pruneTags = true
 [man]
 	viewer = colored
 [man "colored"]
 	cmd = zsh ~/.dotfiles/zsh/functions/man
 [rerere]
 	enabled = true
+	autoupdate = true
 [init]
 	defaultBranch = main
 [user]
@@ -56,3 +62,9 @@
 	email = twbecker@gmail.com
 [include]
     path = ~/.gitlocalconfig
+[column]
+	ui = auto
+[tag]
+	sort = version:refname
+[help]
+	autocorrect = prompt
