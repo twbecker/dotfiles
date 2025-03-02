@@ -27,3 +27,4 @@ zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion:*:*:*:*:processes' command 'ps -U $USER -o pid,user,cmd'
 
 autoload -U +X bashcompinit && bashcompinit
+(( $+commands[op] )) && eval "$(op completion zsh)" && compdef _op op
