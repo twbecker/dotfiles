@@ -28,3 +28,9 @@
 [submodule "zsh-completions"]
 	path = zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "vim/bundle/vim/bundle/vim-just"]
+	path = vim/bundle/vim/bundle/vim-just
+	url = https://github.com/NoahTheDuke/vim-just.git
+[submodule "vim/bundle/vim-just"]
+	path = vim/bundle/vim-just
+	url = https://github.com/NoahTheDuke/vim-just.git
