@@ -1,10 +1,9 @@
-execute pathogen#infect('bundle/{}', '~/.dotfiles/vim/bundle/{}')
 filetype indent plugin on
 runtime macros/matchit.vim
 
 let g:netrw_dirhistmax=0 " Don't create .netrwhist files 
 let g:airline_powerline_fonts=1
-let g:airline_theme='base16'
+let g:airline_theme='base16_dracula'
 let g:airline#extensions#tabline#enabled=1
 
 if exists('$BASE16_THEME')
