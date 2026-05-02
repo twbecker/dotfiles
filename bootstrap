@@ -114,15 +114,7 @@ install_dotfiles () {
   done
 }
 
-install_pathogen() {
-    info 'installing pathogen'
-    if [ ! -f ~/.vim/autoload/pathogen.vim ]; then
-        mkdir -p ~/.vim/autoload && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-    fi
-}
-
 install_dotfiles
-install_pathogen
 
 echo ''
 echo '  All installed!'
