@@ -15,4 +15,4 @@ alias mvnci='mvn clean install'
 alias mvni='mvn install'
 alias tf='tail -F'
 alias p='cd ~/projects'
-[[ -f /Users/tobecker/.config/op/plugins.sh ]] && source /Users/tobecker/.config/op/plugins.sh
+[[ -f ~/.config/op/plugins.sh ]] && source ~/.config/op/plugins.sh
